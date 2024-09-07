@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import NavBar from '../components/utils/NavBar'
+import NavBar from '../components/utility/NavBar'
 import NavBar2 from '../components/home/NavBar2'
 import HomeDrawer from '../components/home/HomeDrawer'
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import UserProfile from '../components/utils/UserProfile';
+import UserProfile from '../components/utility/UserProfile';
 
 const Profile = () => {
   return (

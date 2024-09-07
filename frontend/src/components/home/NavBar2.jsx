@@ -1,5 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 
 const user = {
   name: 'Smnthjm08',
@@ -41,14 +42,22 @@ export default function NavBar2() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    alt="logo"
-                    src="/logo.svg"
-                    className="h-8 w-auto mr-2"
-                  />
-                  <h1 className='text-white font-extrabold'>codeBin 🗑️</h1>
-                </div>
+              <div className="flex flex-shrink-0 items-center">
+  <Link to="/" className="flex items-center">
+    <img
+      alt="codeBin logo"
+      src="/logo.svg"
+      className="h-8 w-auto mr-2"
+      aria-hidden="true"
+    />
+    <span
+      className="text-white font-extrabold hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white cursor-pointer"
+    >
+      codeBin 🗑️
+    </span>
+  </Link>
+</div>
+
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (

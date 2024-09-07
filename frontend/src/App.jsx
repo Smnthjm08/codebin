@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import NavBar from "./components/utils/NavBar";
-import NotFound from "./components/utils/NotFound";
-import Layout from "./components/utils/Layout";
+import NavBar from "./components/utility/NavBar";
+import NotFound from "./components/utility/NotFound";
+import Layout from "./components/utility/Layout";
+import Login from "./components/auth/Login";
 
 export default function App() {
   return (
@@ -12,10 +13,11 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route index element={<Home />} /> 
+            <Route path="profile" element={<Profile />} />
           </Route>
-            <Route path="/*" element={<NotFound />} />
+          <Route path="/sign-in" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </Router>
